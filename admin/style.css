@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f2f4f7;
+}
+
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: #000;
+    position: fixed;
+    color: #fff;
+    padding-top: 20px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background: #333;
+}
+
+.sidebar a.active {
+    background: #444;
+}
+
+.sidebar a.logout {
+    margin-top: 40px;
+    background:#900;
+}
+
+.main {
+    margin-left: 230px;
+    padding: 30px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    flex: 1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+    width: 70%;
+    padding: 10px;
+    margin-top: 10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.save-btn {
+    padding: 10px 20px;
+    background:black;
+    color:white;
+    border:none;
+    margin-top: 15px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.save-btn:hover {
+    background:#333;
+}
+
+.chart-box {
+    background: white;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+
+/* Pie chart için özel çözüm */
+.pie-chart-box canvas {
+    max-height: 250px !important;
+    width: auto !important;
+}
+
+.dashboard-chart {
+    height: 450px !important;
+    padding: 15px 20px;
+}
+
+.dashboard-chart canvas {
+    max-height: 360px !important;
+}
+
+.main label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.main input,
+.main textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+

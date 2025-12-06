@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>İçerik Düzenle</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2 class="logo">Admin</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="edit-content.html" class="active">İçerik Düzenle</a>
+    <a href="stats.html">İstatistikler</a>
+    <a href="edit-image.html">Resim Yükle</a>
+    <a href="../index.html" class="logout">Siteye Git</a>
+</div>
+
+<div class="main">
+    <h1>İçerik Düzenle</h1>
+
+    <label>Başlık</label>
+    <input type="text" id="title" value="İç Tasarım Çalışmalarımız">
+
+    <label>Açıklama</label>
+    <textarea id="desc">Lorem ipsum dolor sit amet...</textarea>
+
+    <button class="save-btn" onclick="save()">Kaydet</button>
+</div>
+
+<script>
+function save(){
+    alert("Simülasyon: İçerik başarıyla kaydedildi! (Gerçek kayıt yok)");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>İstatistikler</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+/* EKSTRA KÜÇÜK VE PROFESYONEL STAT SAYFASI TASARIMI */
+.row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.chart-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.08);
+}
+
+.chart-box.small {
+    flex: 1;
+    height: 320px;
+}
+
+.chart-box.full {
+    height: 380px;
+}
+
+.chart-box h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2 class="logo">Admin</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="edit-content.html">İçerik Düzenle</a>
+    <a href="stats.html" class="active">İstatistikler</a>
+    <a href="edit-image.html">Resim Yükle</a>
+    <a href="../index.html" class="logout">Siteye Git</a>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+    <h1>İstatistikler</h1>
+
+    <!-- 2'li üst sıra -->
+    <div class="row">
+        <div class="chart-box small">
+            <h2>Yıllara Göre Proje Sayısı</h2>
+            <canvas id="projectsChart"></canvas>
+        </div>
+
+        <div class="chart-box small pie-chart-box">
+            <h2>Proje Türleri Dağılımı</h2>
+            <canvas id="typesChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Alt tek grafik -->
+    <div class="chart-box full">
+        <h2>Aylık Müşteri Yoğunluğu</h2>
+        <canvas id="clientsChart"></canvas>
+    </div>
+</div>
+
+
+<!-- Grafik Kodları -->
+<script>
+// 1) Bar Chart – Yıllara göre tamamlanan projeler
+new Chart(document.getElementById("projectsChart"), {
+    type: "bar",
+    data: {
+        labels: ["2020", "2021", "2022", "2023", "2024"],
+        datasets: [{
+            label: "Tamamlanan Projeler",
+            data: [15, 22, 27, 33, 41],
+            backgroundColor: "rgba(0,123,255,0.6)",
+            borderRadius: 6
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: { beginAtZero: true }
+        }
+    }
+});
+
+// 2) Pie Chart – Proje türleri dağılımı
+new Chart(document.getElementById("typesChart"), {
+    type: "pie",
+    data: {
+        labels: ["Ev", "Ofis", "Cafe & Restoran", "Otel"],
+        datasets: [{
+            data: [40, 25, 20, 15],
+            backgroundColor: [
+                "#007bff",
+                "#28a745",
+                "#ffc107",
+                "#dc3545"
+            ]
+        }]
+    },
+    options: { responsive: true }
+});
+
+// 3) Line Chart – Aylık müşteri yoğunluğu
+new Chart(document.getElementById("clientsChart"), {
+    type: "line",
+    data: {
+        labels: ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran"],
+        datasets: [{
+            label: "Müşteri Sayısı",
+            data: [10, 12, 16, 18, 25, 28],
+            borderColor: "#ff5733",
+            borderWidth: 3,
+            tension: 0.4
+        }]
+    },
+    options: { responsive: true }
+});
+</script>
+
+</body>
+</html>
