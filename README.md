@@ -60,8 +60,6 @@ news.html
 contact.html
 ```
 
-
-
 ---
 
 ## Tasarım Prensipleri
@@ -97,6 +95,41 @@ contact.html
 
 ---
 
+## Sistem Mimarisi
+
+Polk Web Projesi, katmanlı ve modüler bir frontend mimarisi üzerine inşa edilmiştir.  
+HTML, CSS ve JavaScript katmanları ayrı ayrı organize edilerek bakım maliyeti düşük ve genişletilebilir bir yapı hedeflenmiştir.
+
+Tüm sayfalarda ortak kullanılan bileşenler (navbar, footer, kart yapıları ve servis blokları) merkezi bir yapı üzerinden yönetilmektedir.  
+Bu sayede tekrar kullanılabilirlik sağlanmış ve içerik genişletme süreçleri kolaylaştırılmıştır.
+
+---
+
+## Sayfa Yapıları
+
+| Sayfa | Açıklama |
+|-----|---------|
+| index.html | Anasayfa, tanıtım ve hizmet kartları |
+| about.html | Firma tanıtımı, misyon ve vizyon |
+| company.html | Kurumsal bilgiler |
+| design.html | Tasarım ve hizmet detayları |
+| news.html | Haberler ve müşteri geri bildirimleri |
+| contact.html | İletişim formu ve Google Maps entegrasyonu |
+
+---
+
+## Karşılaşılan Zorluklar ve Çözümler
+
+| Sorun | Uygulanan Çözüm |
+|------|----------------|
+| Dağınık CSS yapısı | Stil dosyaları merkezi style.css altında toplandı |
+| Mobil uyumsuzluklar | Bootstrap grid ve responsive medya sorguları yeniden yapılandırıldı |
+| Google Maps embed problemi | Manuel embed kodu yeniden oluşturuldu |
+| Admin panel uyumsuzluğu | HTML sınıfları ve margin/padding değerleri standartlaştırıldı |
+| Türkçe karakter bozulmaları | Tüm sayfalara UTF-8 charset eklendi |
+
+---
+
 ## Gelecek Çalışmalar
 
 - CMS entegrasyonu  
@@ -112,4 +145,3 @@ contact.html
 
 Polk Web Projesi; sade, modern ve ölçeklenebilir yapısıyla iç mimarlık firmaları için profesyonel bir web altyapısı sunmaktadır.  
 Akademik kullanım, portföy sunumu ve ticari projeler için uygun bir temel oluşturmaktadır.
-
