@@ -43,17 +43,24 @@ Bootstrap tabanlı çok sayfalı mimarisi sayesinde kurumsal firmaların dijital
 /css
   style.css
   responsive.css
+
 /js
   script.js
   plugin.js
+
 /images
+
 /admin
+
 index.html
 about.html
 company.html
 design.html
 news.html
 contact.html
+```
+
+
 
 ---
 
